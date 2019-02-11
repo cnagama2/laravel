@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')
+   ->middleware(HelloMiddleware::class);
 Route::post('hello', 'HelloController@post');
 
