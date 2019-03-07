@@ -11,7 +11,8 @@ class HelloController extends Controller
 {
     public function index(Request $request)
     {
-      return view('hello.index', ['msg' =>'フォームを入力してください。']);
+      $items = DB::table('people')->get();
+      return view('hello.index', ['items' => $items]);
     }
   
     public function post(HelloRequest $request)
