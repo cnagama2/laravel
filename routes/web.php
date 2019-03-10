@@ -20,8 +20,6 @@ Route::post('hello/edit', 'HelloController@update');
 Route::get('hello/del', 'HelloController@del');
 Route::post('hello/del', 'HelloController@remove');
 
-Route::get('hello/rest', 'HelloController@rest');
-
 Route::get('hello/show', 'HelloController@show');
 
 Route::get('person', 'PersonController@index');
@@ -40,3 +38,8 @@ Route::get('board/add', 'BoardController@add');
 Route::post('board/add', 'BoardController@create');
 
 Route::resource('rest', 'RestappController');
+
+Route::get('hello/rest', 'HelloController@rest');
+
+Route::get('hello/session', 'HelloController@ses_get');
+Route::post('hello/session', 'HelloController@ses_put');
