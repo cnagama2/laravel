@@ -6,8 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use App\Scopes\ScopePerson;
 
-class Person extends Model
+
+  class Person extends Model
 {
+  public function boards()
+  {
+    return $this->hasMany('App\Board');
+  }
 
   protected $guarded = array('id');
     public static $rules = array(
