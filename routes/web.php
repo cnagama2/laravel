@@ -20,6 +20,8 @@ Route::post('hello/edit', 'HelloController@update');
 Route::get('hello/del', 'HelloController@del');
 Route::post('hello/del', 'HelloController@remove');
 
+Route::get('hello/rest', 'HelloController@rest');
+
 Route::get('hello/show', 'HelloController@show');
 
 Route::get('person', 'PersonController@index');
@@ -36,3 +38,5 @@ Route::post('person/del', 'PersonController@remove');
 Route::get('board', 'BoardController@index');
 Route::get('board/add', 'BoardController@add');
 Route::post('board/add', 'BoardController@create');
+
+Route::resource('rest', 'RestappController');
